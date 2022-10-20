@@ -1,1 +1,2 @@
-# Dragon News
+# Dragon ReactBootstrapped News
+
