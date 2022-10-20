@@ -9,17 +9,17 @@ const RightSideNav = () => {
     return (
         <div>
             <ButtonGroup vertical>
-                <Button className='mb-2'    variant="outline-primary"><FaGoogle></FaGoogle> Login with Google</Button>
-                <Button variant="outline-dark"><FaGithub></FaGithub> Login with GitHub</Button>
+                <Button className='mb-2 rounded' variant="outline-primary"><FaGoogle></FaGoogle> Login with Google</Button>
+                <Button className='rounded' variant="outline-dark"><FaGithub></FaGithub> Login with GitHub</Button>
             </ButtonGroup>
             <div className='mt-4'>
                 <h5>Find us on</h5>
                 <ListGroup>
-                    <ListGroup.Item className='mb-2'><FaFacebook></FaFacebook> Facebook</ListGroup.Item>
-                    <ListGroup.Item className='mb-2'><FaTwitter></FaTwitter> Twitter</ListGroup.Item>
-                    <ListGroup.Item className='mb-2'><FaLinkedin></FaLinkedin> Linkedin</ListGroup.Item>
-                    <ListGroup.Item className='mb-2'><FaYoutube></FaYoutube> YouTube</ListGroup.Item>
-                    <ListGroup.Item className='mb-2'><FaWhatsapp></FaWhatsapp> WhatsApp</ListGroup.Item>
+                    <ListGroup.Item className='mb-2 w-75 rounded border'><FaFacebook></FaFacebook> Facebook</ListGroup.Item>
+                    <ListGroup.Item className='mb-2 w-75 rounded border'><FaTwitter></FaTwitter> Twitter</ListGroup.Item>
+                    <ListGroup.Item className='mb-2 w-75 rounded border'><FaLinkedin></FaLinkedin> Linkedin</ListGroup.Item>
+                    <ListGroup.Item className='mb-2 w-75 rounded border'><FaYoutube></FaYoutube> YouTube</ListGroup.Item>
+                    <ListGroup.Item className='mb-2 w-75 rounded border'><FaWhatsapp></FaWhatsapp> WhatsApp</ListGroup.Item>
                 </ListGroup>
             </div>
             <div>
