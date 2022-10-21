@@ -5,7 +5,7 @@ import Brand2 from '../../../assets/brands/Brand2.png';
 
 const BrandCarousel = () => {
     return (
-        <Carousel>
+        <Carousel fade indicators={false} controls={false}>
             <Carousel.Item>
                 <img
                     className="d-block w-75 rounded"
