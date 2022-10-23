@@ -39,7 +39,7 @@ const Header = () => {
                                     </>
                             }
                         </Nav.Link>
-                        <Nav.Link>
+                        <Link to='profile'>
                             {
                                 user?.photoURL ?
                                     <Image
@@ -49,7 +49,7 @@ const Header = () => {
                                     ></Image>
                                     : <FaUser></FaUser>
                             }
-                        </Nav.Link>
+                        </Link>
                     </Nav>
                     <div className='d-lg-none'>
                         <LeftSideNav></LeftSideNav>

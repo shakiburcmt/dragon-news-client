@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendEmailVerification, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import app from '../../firebase/firebase.config';
 
 export const AuthContext = createContext();
@@ -28,6 +28,10 @@ const AuthProvider = ({ children }) => {
         return updateProfile(auth.currentUser, profile);
     }
 
+    const verifyEmail = () => {
+        return sendEmailVerification(auth.currentUser);
+    }
+
     const logOut = () => {
         setLoading(true);
         return signOut(auth);
@@ -36,7 +40,9 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             console.log('user inside state change', currentUser);
-            setUser(currentUser);
+            if (currentUser === null || currentUser.emailVerified) {
+                setUser(currentUser);
+            }
             setLoading(false);
         });
         return () => {
@@ -45,12 +51,15 @@ const AuthProvider = ({ children }) => {
     }, [])
 
     const authInfo = {
+        // state er bam pashe object er duita value e pathano jay abar access o kora jay, loading setLoading duitai pathano hoyeche
         user,
         loading,
+        setLoading,
         providerLogIn,
         createUser,
         signIn,
         updateUserProfile,
+        verifyEmail,
         logOut,
     };
 
