@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import { FaGoogle, FaGithub, FaFacebook, FaTwitter, FaLinkedin, FaYoutube, FaWhatsapp } from "react-icons/fa";
+import { FaGoogle, FaGithub, FaFacebook, FaTwitter, FaLinkedin, FaYoutube, FaWhatsapp, FaLocationArrow } from "react-icons/fa";
 import ListGroup from 'react-bootstrap/ListGroup';
 import BrandCarousel from '../BrandCarousel/BrandCarousel';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
@@ -26,7 +26,8 @@ const RightSideNav = () => {
         <div>
             <ButtonGroup vertical>
                 <Button onClick={handleLogIn} className='mb-2 rounded' variant="outline-primary"><FaGoogle></FaGoogle> Login with Google</Button>
-                <Button className='rounded' variant="outline-dark"><FaGithub></FaGithub> Login with GitHub</Button>
+                <Button className='rounded mb-2' variant="outline-dark"><FaGithub></FaGithub> Login with GitHub</Button>
+                <Button className='rounded' variant="outline-dark"><FaLocationArrow></FaLocationArrow> Location</Button>
             </ButtonGroup>
             <div className='mt-4'>
                 <h5>Find us on</h5>
